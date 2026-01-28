@@ -27,7 +27,7 @@ def cleanup_files(file_paths: list):
         if os.path.exists(path):
             os.remove(path)
 
-@app.post("/api/convert-to-word")
+@app.post("/convert-to-word")
 async def convert_pdf_to_word(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
     # Define rutas para los archivos temporales
     pdf_path = os.path.join(TEMP_DIR, file.filename)
