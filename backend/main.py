@@ -5,7 +5,8 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pdf2docx import Converter
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
+
 
 # Configuración CORS para permitir peticiones desde el frontend de React
 # Asegúrate de que el puerto coincida con el de Vite (por defecto 5173)
